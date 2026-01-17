@@ -1,0 +1,17 @@
+:root {
+  /* Color variables */
+  --primary: #1322a5;
+  --secondary: #6a716f;
+  --secondary-variant: #9a9a9a;
+  --background: #fff5ed;
+
+  /* Font families */
+  --header-font: "Averia Serif Libre", serif;
+  --body-font: "Noto Sans JP", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  font-family: var(--body-font);
+}

@@ -1,0 +1,120 @@
+/* Overlay backdrop with fade-in animation */
+.sm-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  z-index: 99999;
+  animation: smFadeIn 180ms ease-out;
+}
+
+/* Modal container with pop animation */
+.sm-modal {
+  width: min(520px, 100%);
+  border: 3px solid var(--primary);
+  background: #fff5ed;
+  border-radius: 18px;
+  padding: 16px;
+  box-shadow: 0 18px 46px rgba(19, 34, 165, 0.22);
+  transform-origin: center;
+  animation: smPop 180ms ease-out;
+}
+
+/* Header layout: title and close button */
+.sm-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.sm-title {
+  margin: 0;
+  font-family: var(--header-font);
+  font-size: 24px;
+  line-height: 1.1;
+  color: var(--primary);
+}
+
+.sm-message {
+  margin: 8px 0 0;
+  font-family: var(--body-font);
+  line-height: 1.6;
+  color: var(--primary);
+  opacity: 0.9;
+}
+
+/* Close button styling */
+.sm-x {
+  border: 2px solid rgba(19, 34, 165, 0.18);
+  background: #fff;
+  color: var(--primary);
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-family: var(--body-font);
+  font-weight: 900;
+  transition: 0.2s ease;
+}
+
+.sm-x:hover {
+  background: var(--primary);
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(19, 34, 165, 0.14);
+}
+
+/* Action buttons container */
+.sm-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.sm-btn {
+  border-radius: 999px;
+  padding: 10px 14px;
+  font-family: var(--body-font);
+  font-weight: 900;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+/* Cancel button styling */
+.sm-cancel {
+  border: 2px solid rgba(19, 34, 165, 0.18);
+  background: #fff;
+  color: var(--primary);
+}
+
+.sm-cancel:hover {
+  background: #0f1a86;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* Confirm button styling */
+.sm-confirm {
+  border: 2px solid var(--primary);
+  background: var(--primary);
+  color: #fff;
+}
+
+.sm-confirm:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(19, 34, 165, 0.14);
+}
+
+@keyframes smFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes smPop {
+  from { transform: translateY(6px) scale(0.98); opacity: 0; }
+  to { transform: translateY(0) scale(1); opacity: 1; }
+}

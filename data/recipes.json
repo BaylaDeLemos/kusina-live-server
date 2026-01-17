@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "Spaghetti Carbonara",
+    "description": "A classic Italian pasta dish with eggs, cheese, and pancetta.",
+    "ingredients": [
+      "200g spaghetti",
+      "100g pancetta",
+      "2 eggs",
+      "50g Parmesan cheese",
+      "Black pepper"
+    ],
+    "instructions": "1. Cook spaghetti in salted boiling water. 2. Fry pancetta until crispy. 3. Mix eggs and cheese. 4. Combine with pasta and pancetta.",
+    "image": "/images/spaghetti.jpg",
+    "category": "Italian"
+  },
+  {
+    "id": 2,
+    "title": "Chicken Curry",
+    "description": "A flavorful Indian curry with tender chicken and spices.",
+    "ingredients": [
+      "500g chicken",
+      "2 onions",
+      "3 tomatoes",
+      "Spices (cumin, coriander, turmeric)",
+      "Coconut milk"
+    ],
+    "instructions": "1. Sauté onions. 2. Add spices and tomatoes. 3. Add chicken and cook. 4. Stir in coconut milk.",
+    "image": "/images/chicken-curry.jpg",
+    "category": "Indian"
+  }
+]

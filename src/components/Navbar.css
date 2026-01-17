@@ -1,0 +1,209 @@
+/* Sticky top navigation bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 25px;
+  background: var(--background);
+  font-family: var(--header-font);
+  flex-wrap: wrap;
+
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+
+.navbar .logo img {
+  height: 90px;
+  display: block;
+}
+
+/* Desktop navigation links */
+.navbar-links {
+  display: flex;
+  gap: 35px;
+  align-items: center;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: var(--primary);
+  font-size: 1rem;
+}
+
+.navbar-links a:hover {
+  color: var(--secondary);
+}
+
+/* Sign up / Login button */
+.navbar .signup-btn {
+  padding: 8px 14px;
+  font-family: var(--header-font);
+  border-radius: 50px;
+  border: 2px solid var(--primary);
+  background: var(--background);
+  color: var(--primary);
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.navbar .signup-btn:hover {
+  background: var(--primary);
+  color: white;
+}
+
+/* Mobile hamburger menu button */
+.hamburger {
+  display: none;
+  position: relative;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  z-index: 10001;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburger:hover {
+  background: rgba(19, 34, 165, 0.06);
+}
+
+.hamburger span {
+  position: absolute;
+  width: 26px;
+  height: 2.5px;
+  background-color: var(--primary);
+  border-radius: 2px;
+  transition:
+    transform 0.35s ease,
+    opacity 0.25s ease;
+}
+
+.hamburger span:nth-child(1) {
+  transform: translateY(-8px);
+}
+
+.hamburger span:nth-child(2) {
+  transform: translateY(0);
+}
+
+.hamburger span:nth-child(3) {
+  transform: translateY(8px);
+}
+
+/* Hamburger animation when active */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+/* Backdrop overlay when mobile menu opens */
+.menu-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease;
+  z-index: 9998;
+}
+
+.menu-backdrop.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Mobile side navigation panel */
+.mobile-menu {
+  display: flex;
+  font-family: var(--header-font);
+  flex-direction: column;
+  gap: 28px;
+  position: fixed;
+  top: 0;
+  right: -340px;
+  width: 280px;
+  height: 100vh;
+  background: var(--background);
+  padding: 90px 22px 22px;
+  box-shadow: -3px 0 15px rgba(129, 101, 101, 0.15);
+  transition: right 0.3s ease;
+
+  z-index: 10000;
+}
+
+.mobile-menu.active {
+  right: 0;
+}
+
+.mobile-menu a {
+  font-size: 1.05rem;
+  text-decoration: none;
+  color: var(--primary);
+  text-align: left;
+  padding: 8px 8px;
+  border-radius: 10px;
+}
+
+.mobile-menu a:hover {
+  background: rgba(19, 34, 165, 0.08);
+}
+
+.mobile-menu .signup-btn {
+  font-size: 1rem;
+  font-family: var(--header-font);
+  color: var(--primary);
+  text-align: center;
+}
+
+/* Tablet and smaller screens */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 8px 16px;
+    flex-wrap: nowrap;
+  }
+
+  .navbar .logo img {
+    height: 70px;
+  }
+
+  /* Hide desktop links on mobile */
+  .navbar-links {
+    display: none;
+  }
+
+  /* Show hamburger on mobile */
+  .hamburger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mobile-menu {
+    width: min(85vw, 300px);
+    right: -90vw;
+  }
+
+  .mobile-menu.active {
+    right: 0;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 420px) {
+  .navbar .logo img {
+    height: 62px;
+  }
+}

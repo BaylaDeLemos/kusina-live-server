@@ -1,0 +1,67 @@
+/* Decorative line above title */
+.rr-line {
+  width: 600px;           
+  height: 3px;
+  background-color: var(--primary); 
+  margin: 0.5rem auto 1.5rem;  
+  border-radius: 2px;
+}
+
+/* Main CTA section with warm background */
+.request-recipe {
+  text-align: center;
+  padding: 4rem 1rem;
+  background-color: #fff5ed;
+  margin-top: 4rem;
+}
+
+.rr-title {
+  font-family: "Averia Serif Libre", serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #1322a5;
+  margin-bottom: 0.8rem;
+}
+
+.rr-subtext {
+  font-family: var(--header-font);
+  font-size: 1rem;
+  color: var(--primary);
+  margin-bottom: 1.8rem;
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Call-to-action button */
+.rr-btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border: 2px solid var(--primary);
+  background-color: var(--background);
+  color: #1322a5;
+  font-family: "Averia Serif Libre", serif;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.rr-btn:hover {
+  background-color: #1322a5;
+  color: white;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .rr-line {
+    width: 90px;
+  }
+  .rr-title {
+    font-size: 1.7rem;
+  }
+  .rr-btn {
+    padding: 0.6rem 1.6rem;
+    font-size: 1rem;
+  }
+}

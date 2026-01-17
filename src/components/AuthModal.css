@@ -1,0 +1,212 @@
+/* Modal backdrop with blur effect */
+.authModal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(19, 34, 165, 0.18);
+  backdrop-filter: blur(6px);
+  display: grid;
+  place-items: center;
+  padding: 16px;
+}
+
+/* Main modal container */
+.authModal {
+  width: min(520px, 100%);
+  border: 3px solid var(--primary);
+  background: var(--background);
+  color: var(--primary);
+  padding: 16px;
+  border-radius: 18px;
+  box-shadow: 0 24px 70px rgba(19, 34, 165, 0.22);
+  animation: authPop 180ms ease-out;
+}
+
+/* Modal entrance animation */
+@keyframes authPop {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Header section with title and close button */
+.authModal-top {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+/* Subtitle text above title */
+.authModal-kicker {
+  margin: 0 0 6px;
+  font-family: var(--body-font);
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(19, 34, 165, 0.75);
+  font-size: 12px;
+}
+
+/* Main modal title */
+.authModal-title {
+  margin: 0;
+  font-family: var(--header-font);
+  font-size: 30px;
+  line-height: 1.1;
+}
+
+/* Close button */
+.authModal-close {
+  border: 2px solid var(--primary);
+  background: var(--primary);
+  color: var(--background);
+  border-radius: 999px;
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
+  font-weight: 900;
+  transition: 0.2s ease;
+}
+
+.authModal-close:hover {
+  background: var(--background);
+  color: var(--primary);
+  transform: translateY(-1px);
+}
+
+/* Tab container for Login/Signup */
+.authModal-tabs {
+  display: flex;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+/* Individual tab button */
+.authModal-tab {
+  border: 2px solid var(--primary);
+  background: var(--background);
+  color: var(--primary);
+  border-radius: 999px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-family: var(--body-font);
+  font-weight: 900;
+  transition: 0.2s ease;
+}
+
+.authModal-tab:hover {
+  background: var(--primary);
+  color: var(--background);
+}
+
+.authModal-tab.active {
+  background: var(--primary);
+  color: var(--background);
+  box-shadow: 0 10px 20px rgba(19, 34, 165, 0.12);
+}
+
+/* Error message display */
+.authModal-error {
+  margin: 12px 0 0;
+  font-family: var(--body-font);
+  font-weight: 800;
+  background: var(--background);
+  border: 2px solid var(--primary);
+  border-radius: 14px;
+  padding: 10px 12px;
+}
+
+/* Form container */
+.authModal-form {
+  margin-top: 14px;
+  display: grid;
+  gap: 12px;
+}
+
+/* Form field wrapper */
+.authModal-field {
+  display: grid;
+  gap: 6px;
+}
+
+/* Form field label */
+.authModal-field span {
+  font-family: var(--body-font);
+  font-weight: 900;
+  font-size: 13px;
+  color: rgba(19, 34, 165, 0.85);
+}
+
+/* Form input field */
+.authModal-field input {
+  border: 2px solid var(--primary);
+  background: var(--background);
+  border-radius: 14px;
+  padding: 12px 14px;
+  font-family: var(--body-font);
+  outline: none;
+  color: var(--primary);
+}
+
+.authModal-field input:focus {
+  border-color: rgba(19, 34, 165, 0.45);
+  box-shadow: 0 10px 22px rgba(19, 34, 165, 0.10);
+}
+
+/* Submit button */
+.authModal-btn {
+  border: 2px solid var(--primary);
+  background: var(--primary);
+  color: white;
+  border-radius: 999px;
+  padding: 12px 14px;
+  cursor: pointer;
+  font-family: var(--body-font);
+  font-weight: 900;
+  transition: 0.2s ease;
+}
+
+.authModal-btn:hover {
+  background: #0f1a86;
+  transform: translateY(-1px);
+  box-shadow: 0 12px 26px rgba(19, 34, 165, 0.14);
+}
+
+.authModal-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Text with link for switching between login/signup */
+.authModal-switch {
+  margin: 0;
+  text-align: center;
+  font-family: var(--body-font);
+  color: rgba(19, 34, 165, 0.85);
+}
+
+/* Link button inside switch text */
+.authModal-linkBtn {
+  border: none;
+  background: none;
+  color: var(--primary);
+  font-weight: 900;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+}
+
+/* Mobile responsive */
+@media (max-width: 520px) {
+  .authModal-title {
+    font-size: 26px;
+  }
+}

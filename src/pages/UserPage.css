@@ -1,0 +1,264 @@
+/* User profile page container */
+.user-page {
+  background: var(--background);
+  min-height: 100vh;
+  padding: 32px 16px 70px;
+  color: var(--primary);
+}
+
+.user-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Page header with title and back link */
+.user-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.user-kicker {
+  margin: 0 0 10px;
+  font-family: var(--body-font);
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(19, 34, 165, 0.7);
+  font-size: 12px;
+}
+
+.user-title {
+  margin: 0 0 6px;
+  font-family: var(--header-font);
+  font-size: 54px;
+  line-height: 1.05;
+  color: var(--primary);
+}
+
+.user-sub {
+  margin: 0;
+  font-family: var(--body-font);
+  opacity: 0.85;
+}
+
+/* Back navigation button */
+.user-back {
+  font-family: var(--body-font);
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 800;
+  opacity: 0.85;
+  border: 2px solid #0f1a86;
+  padding: 8px 15px;
+  display: inline-block;
+  border-radius: 90px;
+}
+
+.user-back:hover {
+  opacity: 1;
+  box-shadow: 0 8px 20px rgba(19, 34, 165, 0.12);
+}
+
+.user-status {
+  text-align: center;
+  font-family: var(--body-font);
+  margin-top: 30px;
+}
+
+/* Two-column grid for favorites and saved list */
+.user-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* Section card container */
+.user-card {
+  border: 3px solid var(--primary);
+  background: #fff5ed;
+  padding: 16px;
+}
+
+.user-cardHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.user-h2 {
+  margin: 0;
+  font-family: var(--header-font);
+  font-size: 28px;
+}
+
+/* Section count pill */
+.user-pill {
+  background: #f3e7dc;
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-family: var(--body-font);
+  font-weight: 900;
+  font-size: 13px;
+}
+
+.user-emptyTitle {
+  margin: 0 0 8px;
+  font-family: var(--header-font);
+  font-size: 22px;
+}
+
+.user-emptyText {
+  margin: 0;
+  font-family: var(--body-font);
+  line-height: 1.7;
+}
+
+/* Call-to-action button */
+.user-btn {
+  margin-top: 14px;
+  border: 2px solid var(--primary);
+  background: #fff;
+  color: var(--primary);
+  border-radius: 999px;
+  padding: 10px 14px;
+  font-family: var(--body-font);
+  font-weight: 900;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.user-btn:hover {
+  background: var(--primary);
+  color: var(--background);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(19, 34, 165, 0.14);
+}
+
+/* Recipe list container */
+.user-list {
+  display: grid;
+  gap: 10px;
+}
+
+/* Individual recipe item row */
+.user-item {
+  background: #fff;
+  border: 2px solid rgba(19, 34, 165, 0.18);
+  border-radius: 16px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.user-itemLink {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+  flex: 1;
+  min-width: 0;
+}
+
+/* Recipe thumbnail image */
+.user-thumb {
+  width: 64px;
+  height: 54px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 2px solid rgba(19, 34, 165, 0.18);
+  background: #fff5ed;
+  flex: 0 0 auto;
+}
+
+.user-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.user-thumbFallback {
+  width: 100%;
+  height: 100%;
+  background: rgba(19, 34, 165, 0.06);
+}
+
+/* Recipe item text (title and details) */
+.user-itemText {
+  min-width: 0;
+}
+
+.user-itemTitle {
+  margin: 0;
+  font-family: var(--header-font);
+  font-size: 18px;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.user-itemMini {
+  margin: 6px 0 0;
+  font-family: var(--body-font);
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+/* Remove button for items */
+.user-miniBtn {
+  border: 2px solid rgba(19, 34, 165, 0.18);
+  background: #fff5ed;
+  color: var(--primary);
+  border-radius: 12px;
+  padding: 10px 12px;
+  cursor: pointer;
+  font-family: var(--body-font);
+  font-weight: 900;
+  transition: 0.2s ease;
+  flex: 0 0 auto;
+}
+
+.user-miniBtn:hover {
+  background: var(--primary);
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(19, 34, 165, 0.14);
+}
+
+.user-miniBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Tablet screens */
+@media (max-width: 980px) {
+  .user-title {
+    font-size: 42px;
+  }
+  .user-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 520px) {
+  .user-title {
+    font-size: 36px;
+  }
+  .user-thumb {
+    width: 58px;
+    height: 50px;
+  }
+}
